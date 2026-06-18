@@ -19,7 +19,7 @@
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  PSCR  |  | ENTER |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+            //                     | ALT  | GUI  | SPACE|  LOWER |  | RAISE | SPACE| RALT  | RGUI  |
 
             display-name = "Base";
             bindings = <
@@ -57,16 +57,16 @@
             // ------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
             // |   ~   |  !  |  @  |  #   |  |   |  ^   |                   |  &   |  [    |  ]    |  %   |   \   |   `   |
-            // |   `   |  =  |  <  |  >   |  {   |  }   |                   |  +   |  (    |  )    |  :   |   ;   |   "   |
-            // | SHIFT |  _  |  -  |  *   |  $   |  /   |  PSCR  |  | BKSP  |  ?   |  '    |  .    |  ,   |   !   | SHIFT |
+            // |   `   |  =  |  <  |  >   |  '   |  "   |                   |  +   |  (    |  )    |  :   |   ;   |   '   |
+            // | SHIFT |  _  |  -  |  *   |  $   |  /   |        |  |       | BSPC |  {    |  }    |  ,   |   !   | SHIFT |
             //                     |      |      |      |        |  |       |      |       |       |
 
             display-name = "Lower";
             bindings = <
 &kp F1         &kp F2     &kp F3     &kp F4     &kp F5      &kp F6                                  &kp F7     &kp F8        &kp F9     &kp F10    &kp F11   &kp F12
 &kp TILDE      &kp EXCL   &kp AT     &kp HASH   &kp PIPE    &kp CARET                               &kp AMPS   &kp LBKT      &kp RBKT   &kp PRCNT  &kp BSLH  &kp GRAVE
-&kp GRAVE      &kp EQUAL  &kp LT     &kp GT     &kp LBRC    &kp RBRC                                &kp PLUS   &kp LPAR      &kp RPAR   &kp COLON  &kp SEMI  &kp DQT
-&kp LEFT_SHIFT &kp UNDER  &kp MINUS  &kp STAR   &kp DOLLAR  &kp FSLH    &kp PRINTSCREEN  &kp BSPC   &kp QMARK  &kp SQT       &kp DOT    &kp COMMA  &kp EXCL  &kp RSHFT
+&kp GRAVE      &kp EQUAL  &kp LT     &kp GT     &kp SQT     &kp DQT                                 &kp PLUS   &kp LPAR      &kp RPAR   &kp COLON  &trans    &trans
+&kp LEFT_SHIFT &kp UNDER  &kp MINUS  &kp STAR   &kp DOLLAR  &kp FSLH    &trans           &trans     &kp BSPC   &kp LBRC      &kp RBRC   &kp COMMA  &kp EXCL  &kp RSHFT
                                      &trans     &trans      &trans      &trans           &mo 3      &trans     &trans        &trans
             >;
 
