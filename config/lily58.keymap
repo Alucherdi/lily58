@@ -15,10 +15,10 @@
 
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  BKSP |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  PSCR  |  | ENTER |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             display-name = "Base";
@@ -36,10 +36,10 @@
         raise_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
+            // |       |     |  7  |  8   |  9   |      |                   | lgui |  pup  |   ^   | pdown| home  |       |
+            // |       |  0  |  4  |  5   |  6   |      |                   | lctrl|   <-  |   v   |  ->  |  end  |ls(ctrl)|
+            // |   F7  |  F8 |  1  |  2   |  3   |      |        |  |       | del  |   `   |   ~   |  [   |   ]   |   \   |
+            //                     |      |      |      |   m3   |  |       |      |       |       |
 
             display-name = "Raise";
             bindings = <
@@ -55,19 +55,19 @@
 
         lower_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            // |   ~   |  !  |  @  |  #   |  |   |  ^   |                   |  &   |  [    |  ]    |  %   |   \   |   `   |
+            // |   `   |  =  |  <  |  >   |  {   |  }   |                   |  +   |  (    |  )    |  :   |   ;   |   "   |
+            // | SHIFT |  _  |  -  |  *   |  $   |  /   |  PSCR  |  | BKSP  |  ?   |  '    |  .    |  ,   |   !   | SHIFT |
             //                     |      |      |      |        |  |       |      |       |       |
 
             display-name = "Lower";
             bindings = <
-&kp F1   &kp F2    &kp F3  &kp F4    &kp F5      &kp F6                            &kp F7         &kp F8    &kp F9           &kp F10   &kp F11   &kp F12
-&kp F13  &trans    &trans  &trans    &trans      &trans                            &trans         &trans    &trans           &trans    &trans    &trans
-&trans   &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                         &kp CARET      &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans   &trans    &trans  &trans    &trans      &kp RETURN  &kp LA(F4)    &trans  &kp BACKSPACE  &kp PLUS  &kp EQUAL        &kp LBRC  &kp RBRC  &kp PIPE
-                           &trans    &trans      &trans      &trans        &mo 3   &trans         &trans    &trans
+&kp F1         &kp F2     &kp F3     &kp F4     &kp F5      &kp F6                                  &kp F7     &kp F8        &kp F9     &kp F10    &kp F11   &kp F12
+&kp TILDE      &kp EXCL   &kp AT     &kp HASH   &kp PIPE    &kp CARET                               &kp AMPS   &kp LBKT      &kp RBKT   &kp PRCNT  &kp BSLH  &kp GRAVE
+&kp GRAVE      &kp EQUAL  &kp LT     &kp GT     &kp LBRC    &kp RBRC                                &kp PLUS   &kp LPAR      &kp RPAR   &kp COLON  &kp SEMI  &kp DQT
+&kp LEFT_SHIFT &kp UNDER  &kp MINUS  &kp STAR   &kp DOLLAR  &kp FSLH    &kp PRINTSCREEN  &kp BSPC   &kp QMARK  &kp SQT       &kp DOT    &kp COMMA  &kp EXCL  &kp RSHFT
+                                     &trans     &trans      &trans      &trans           &mo 3      &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -86,3 +86,4 @@
         };
     };
 };
+
