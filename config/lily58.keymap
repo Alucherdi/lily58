@@ -43,11 +43,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans          &trans          &trans            &trans             &trans
-&trans  &trans  &kp N7  &kp N8  &kp N9  &trans                    &kp LEFT_GUI  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN     &kp HOME           &trans
-&trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans                    &kp LCTRL     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp END            &kp LS(LCTRL)
-&trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans    &trans  &kp DEL       &kp GRAVE       &kp TILDE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-                        &trans  &trans  &trans  &mo 3     &trans  &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans          &trans          &trans            &trans             &trans
+&trans  &trans  &kp N7  &kp N8  &kp N9  &trans                    &trans  &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN     &kp HOME           &trans
+&trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp END            &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans    &trans  &kp DEL &kp GRAVE       &kp TILDE       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+                        &trans  &trans  &trans  &mo 3     &trans  &trans  &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -75,11 +75,11 @@
 
         extra_layer {
             bindings = <
-&kp F13   &kp F14  &kp F15  &kp F16  &kp F17  &kp F18                    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp CAPS  &trans   &trans   &trans   &trans   &trans                     &trans      &trans        &trans        &trans        &trans        &trans
-&trans    &trans   &trans   &trans   &trans   &trans                     &trans      &trans        &trans        &trans        &trans        &trans
-&trans    &trans   &trans   &trans   &trans   &trans   &trans    &trans  &trans      &trans        &trans        &trans        &trans        &trans
-                            &trans   &trans   &trans   &trans    &trans  &trans      &trans        &trans
+&kp F13   &kp F14    &kp F15    &kp F16    &kp F17    &kp F18                             &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp CAPS  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)                           &kp LS(Y)    &kp LS(U)     &kp LS(I)     &kp LS(O)     &kp LS(P)     &trans
+&trans    &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)                           &kp LS(H)    &kp LS(J)     &kp LS(K)     &kp LS(L)     &trans        &trans
+&trans    &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)  &trans           &trans  &kp LS(N)    &kp LS(M)     &trans        &trans        &trans        &trans
+                                &trans     &trans     &trans     &trans           &trans  &trans       &trans        &trans
             >;
 
             label = "Extra";
