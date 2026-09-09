@@ -89,7 +89,7 @@
             display-name = "Extra";
             bindings = <
 &kp F13   &kp F14    &kp F15    &kp F16    &kp F17      &kp F18                         &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp CAPS  &trans     &trans     &trans     &trans       &trans                          &trans      &kp PGDN      &trans        &kp PGUP      &trans        &trans
+&kp CAPS  &trans     &trans     &trans     &trans       &trans                          &trans      &kp PGUP      &trans        &kp PGDN      &trans        &trans
 &trans    &kp N1     &kp N2     &kp N3     &kp N4       &kp N5                          &kp N6      &kp N7        &kp N8        &kp N9        &kp N0        &trans
 &trans    &trans     &trans     &trans     &trans       &trans      &trans    &trans    &trans      &trans        &trans        &trans        &trans        &trans
                                 &trans     &trans       &trans      &trans    &trans    &kp LGUI    &kp LS(LGUI)  &trans
