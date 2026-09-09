@@ -10,6 +10,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
+&sk {
+    release-after-ms = <3000>;
+    ignore-modifiers;
+};
+
 / {
 
     behaviors {
@@ -31,11 +36,6 @@
             bindings = <&sks>, <&kp>;
         };
 
-    };
-
-    &sk {
-        release-after-ms = <3000>;
-        ignore-modifiers;
     };
 
     keymap {
