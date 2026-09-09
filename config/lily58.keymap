@@ -31,10 +31,11 @@
             bindings = <&sks>, <&kp>;
         };
 
-        &sk {
-            release-after-ms = <3000>;
-            ignore-modifiers;
-        };
+    };
+
+    &sk {
+        release-after-ms = <3000>;
+        ignore-modifiers;
     };
 
     keymap {
